@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  desc: MyString
+  expiration: 2011-10-14
+  user: 
+
+two:
+  desc: MyString
+  expiration: 2011-10-14
+  user: 

@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Desc:</b>
+  <%= @saved_food.desc %>
+</p>
+
+<p>
+  <b>Expiration:</b>
+  <%= @saved_food.expiration %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @saved_food.user %>
+</p>
+
+
+<%= link_to 'Edit', edit_saved_food_path(@saved_food) %> |
+<%= link_to 'Back', saved_foods_path %>

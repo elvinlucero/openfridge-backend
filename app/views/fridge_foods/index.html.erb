@@ -1,0 +1,27 @@
+<h1>Listing fridge_foods</h1>
+
+<table>
+  <tr>
+    <th>Desc</th>
+    <th>Expiration</th>
+    <th>User</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @fridge_foods.each do |fridge_food| %>
+  <tr>
+    <td><%= fridge_food.desc %></td>
+    <td><%= fridge_food.expiration %></td>
+    <td><%= fridge_food.user %></td>
+    <td><%= link_to 'Show', fridge_food %></td>
+    <td><%= link_to 'Edit', edit_fridge_food_path(fridge_food) %></td>
+    <td><%= link_to 'Destroy', fridge_food, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Fridge food', new_fridge_food_path %>

@@ -1,4 +1,18 @@
 Openfridge::Application.routes.draw do
+  resources :logs
+
+  resources :saved_foods
+
+  resources :shopping_lists
+
+  resources :fridge_foods
+
+  resources :users
+
+  get "home/index"
+
+  root :to => "home#index"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

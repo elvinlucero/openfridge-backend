@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Desc:</b>
+  <%= @fridge_food.desc %>
+</p>
+
+<p>
+  <b>Expiration:</b>
+  <%= @fridge_food.expiration %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @fridge_food.user %>
+</p>
+
+
+<%= link_to 'Edit', edit_fridge_food_path(@fridge_food) %> |
+<%= link_to 'Back', fridge_foods_path %>

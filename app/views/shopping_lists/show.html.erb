@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Desc:</b>
+  <%= @shopping_list.desc %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @shopping_list.user %>
+</p>
+
+
+<%= link_to 'Edit', edit_shopping_list_path(@shopping_list) %> |
+<%= link_to 'Back', shopping_lists_path %>

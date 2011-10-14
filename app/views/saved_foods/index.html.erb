@@ -1,0 +1,27 @@
+<h1>Listing saved_foods</h1>
+
+<table>
+  <tr>
+    <th>Desc</th>
+    <th>Expiration</th>
+    <th>User</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @saved_foods.each do |saved_food| %>
+  <tr>
+    <td><%= saved_food.desc %></td>
+    <td><%= saved_food.expiration %></td>
+    <td><%= saved_food.user %></td>
+    <td><%= link_to 'Show', saved_food %></td>
+    <td><%= link_to 'Edit', edit_saved_food_path(saved_food) %></td>
+    <td><%= link_to 'Destroy', saved_food, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Saved food', new_saved_food_path %>

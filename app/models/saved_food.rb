@@ -1,0 +1,3 @@
+class SavedFood < ActiveRecord::Base
+  belongs_to :user
+end
