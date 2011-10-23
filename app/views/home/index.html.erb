@@ -8,7 +8,7 @@ Please select user.
 @users.each do |user|
 %>
 <br />
-<%= link_to user.uname, :controller => 'users', :action => 'set', :id => user.id, :uname => user.user %>
+<%= link_to user.uname, :controller => 'users', :action => 'set', :id => user.id, :uname => user.uname %>
 <br />
 <%
 end
