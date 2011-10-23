@@ -1,1 +1,21 @@
-<h1>MAIN PAGE</h1>
+
+
+<center> <h1>open fridge</h1> </center>
+<center>
+<% if (session[:user_id] == nil) %>
+Please select user.
+<%
+@users.each do |user|
+%>
+<br />
+<%= link_to user.uname, :controller => 'users', :action => 'set', :id => user.id, :uname => user.user %>
+<br />
+<%
+end
+
+%>
+<% else %>
+Hello  
+
+<% end %>
+</center>

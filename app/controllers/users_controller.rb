@@ -1,6 +1,12 @@
 class UsersController < ApplicationController
   # GET /users
   # GET /users.xml
+  def set
+    session[:user_id] = params[:id]
+    session[:uname] = params[:uname]
+    redirect_to :back
+  end
+  
   def index
     @users = User.all
 

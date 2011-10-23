@@ -1,4 +1,11 @@
 class FridgeFoodsController < ApplicationController
+  
+  def push
+   exp = Time.parse("#{@day}/#{@month}/#{@year}")
+   @fridge_food = FridgeFood.create([:desc => params[:desc], :expiration => exp, :user => User.find(params[:uid])])
+   redirect_to :controller => "fridge_foods"  
+  end
+  
   # GET /fridge_foods
   # GET /fridge_foods.xml
   def index

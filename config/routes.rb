@@ -13,6 +13,11 @@ Openfridge::Application.routes.draw do
 
   root :to => "home#index"
 
+  match "set" => "users#set"
+
+  match "fridge_foods/push?" => "fridge_foods#push"
+  match "fridge_foods/push/:uid/:desc/:year/:month/:day" => "fridge_foods#push"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
