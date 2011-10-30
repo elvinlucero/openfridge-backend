@@ -1,0 +1,100 @@
+2011-10-30T22:39:01+00:00 heroku[router]: GET openfridge.heroku.com/javascripts/application.js dyno=web.1 queue=0 wait=0ms service=1ms status=200 bytes=148
+2011-10-30T22:39:01+00:00 heroku[nginx]: 128.54.47.192 - - [30/Oct/2011:15:39:01 -0700] "GET /javascripts/application.js?1320014304 HTTP/1.1" 200 148 "http://openfridge.heroku.com/fridge_foods" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_2) AppleWebKit/534.51.22 (KHTML, like Gecko) Version/5.1.1 Safari/534.51.22" openfridge.heroku.com
+2011-10-30T22:39:04+00:00 app[web.1]: 
+2011-10-30T22:39:04+00:00 app[web.1]: 
+2011-10-30T22:39:04+00:00 app[web.1]: Started GET "/fridge_foods.xml" for 128.54.47.192 at 2011-10-30 15:39:04 -0700
+2011-10-30T22:39:04+00:00 app[web.1]:   Processing by FridgeFoodsController#index as XML
+2011-10-30T22:39:04+00:00 app[web.1]: Rendered fridge_foods/index.xml.builder (27.0ms)
+2011-10-30T22:39:04+00:00 app[web.1]: Completed 200 OK in 38ms (Views: 32.3ms | ActiveRecord: 4.8ms)
+2011-10-30T22:39:04+00:00 heroku[router]: GET openfridge.heroku.com/fridge_foods.xml dyno=web.1 queue=0 wait=0ms service=48ms status=200 bytes=820
+2011-10-30T22:40:30+00:00 heroku[rake.1]: State changed from created to starting
+2011-10-30T22:40:32+00:00 app[rake.1]: Awaiting client
+2011-10-30T22:40:32+00:00 app[rake.1]: Starting process with command `bundle exec rake db:migrate`
+2011-10-30T22:40:33+00:00 heroku[rake.1]: State changed from starting to up
+2011-10-30T22:40:35+00:00 heroku[rake.1]: Process exited
+2011-10-30T22:40:37+00:00 heroku[rake.1]: State changed from up to complete
+2011-10-30T22:40:43+00:00 app[web.1]: 
+2011-10-30T22:40:43+00:00 app[web.1]: 
+2011-10-30T22:40:43+00:00 app[web.1]: Started GET "/fridge_foods" for 128.54.47.192 at 2011-10-30 15:40:43 -0700
+2011-10-30T22:40:43+00:00 app[web.1]:   Processing by FridgeFoodsController#index as HTML
+2011-10-30T22:40:43+00:00 app[web.1]: Rendered fridge_foods/index.html.erb within layouts/application (21.2ms)
+2011-10-30T22:40:43+00:00 app[web.1]: Completed 200 OK in 24ms (Views: 12.7ms | ActiveRecord: 10.0ms)
+2011-10-30T22:40:43+00:00 heroku[router]: GET openfridge.heroku.com/fridge_foods dyno=web.1 queue=0 wait=0ms service=31ms status=200 bytes=3065
+2011-10-30T22:40:44+00:00 heroku[router]: GET openfridge.heroku.com/javascripts/rails.js dyno=web.1 queue=0 wait=0ms service=3ms status=200 bytes=6278
+2011-10-30T22:40:44+00:00 heroku[router]: GET openfridge.heroku.com/javascripts/controls.js dyno=web.1 queue=0 wait=0ms service=6ms status=200 bytes=34787
+2011-10-30T22:40:44+00:00 heroku[router]: GET openfridge.heroku.com/javascripts/application.js dyno=web.1 queue=0 wait=0ms service=2ms status=200 bytes=148
+2011-10-30T22:40:48+00:00 app[web.1]: 
+2011-10-30T22:40:48+00:00 app[web.1]: 
+2011-10-30T22:40:48+00:00 app[web.1]: Started GET "/fridge_foods/push/2/asdasd/2011/1/1" for 128.54.47.192 at 2011-10-30 15:40:48 -0700
+2011-10-30T22:40:48+00:00 app[web.1]:   Processing by FridgeFoodsController#push as HTML
+2011-10-30T22:40:48+00:00 app[web.1]:   Parameters: {"uid"=>"2", "desc"=>"asdasd", "year"=>"2011", "month"=>"1", "day"=>"1"}
+2011-10-30T22:40:48+00:00 app[web.1]: Completed 500 Internal Server Error in 0ms
+2011-10-30T22:40:48+00:00 app[web.1]: 
+2011-10-30T22:40:48+00:00 app[web.1]: ArgumentError (no time information in "//"):
+2011-10-30T22:40:48+00:00 app[web.1]:   app/controllers/fridge_foods_controller.rb:4:in `push'
+2011-10-30T22:40:48+00:00 app[web.1]: 
+2011-10-30T22:40:48+00:00 app[web.1]: 
+2011-10-30T22:40:49+00:00 app[web.1]: 
+2011-10-30T22:40:49+00:00 app[web.1]: 
+2011-10-30T22:40:49+00:00 app[web.1]: Started GET "/fridge_foods/push/2/asdasd/2011/1/1" for 128.54.47.192 at 2011-10-30 15:40:49 -0700
+2011-10-30T22:40:49+00:00 app[web.1]:   Parameters: {"uid"=>"2", "desc"=>"asdasd", "year"=>"2011", "month"=>"1", "day"=>"1"}
+2011-10-30T22:40:49+00:00 app[web.1]:   Processing by FridgeFoodsController#push as HTML
+2011-10-30T22:40:49+00:00 app[web.1]: Completed 500 Internal Server Error in 0ms
+2011-10-30T22:40:49+00:00 app[web.1]: 
+2011-10-30T22:40:49+00:00 app[web.1]: ArgumentError (no time information in "//"):
+2011-10-30T22:40:49+00:00 app[web.1]:   app/controllers/fridge_foods_controller.rb:4:in `push'
+2011-10-30T22:40:49+00:00 app[web.1]: 
+2011-10-30T22:40:49+00:00 app[web.1]: 
+2011-10-30T22:40:49+00:00 heroku[router]: GET openfridge.heroku.com/fridge_foods/push/2/asdasd/2011/1/1 dyno=web.1 queue=0 wait=0ms service=7ms status=500 bytes=728
+2011-10-30T22:45:50+00:00 app[web.1]: 
+2011-10-30T22:45:50+00:00 app[web.1]: 
+2011-10-30T22:45:50+00:00 app[web.1]: Started GET "/fridge_foods/push/2/asdasd/2011/1/1" for 128.54.47.192 at 2011-10-30 15:45:50 -0700
+2011-10-30T22:45:50+00:00 app[web.1]:   Processing by FridgeFoodsController#push as HTML
+2011-10-30T22:45:50+00:00 app[web.1]:   Parameters: {"uid"=>"2", "desc"=>"asdasd", "year"=>"2011", "month"=>"1", "day"=>"1"}
+2011-10-30T22:45:50+00:00 app[web.1]: Completed 500 Internal Server Error in 0ms
+2011-10-30T22:45:50+00:00 app[web.1]: 
+2011-10-30T22:45:50+00:00 app[web.1]: ArgumentError (no time information in "//"):
+2011-10-30T22:45:50+00:00 app[web.1]: 
+2011-10-30T22:45:50+00:00 app[web.1]:   app/controllers/fridge_foods_controller.rb:4:in `push'
+2011-10-30T22:45:50+00:00 app[web.1]: 
+2011-10-30T22:45:50+00:00 heroku[router]: GET openfridge.heroku.com/fridge_foods/push/2/asdasd/2011/1/1 dyno=web.1 queue=0 wait=0ms service=9ms status=500 bytes=728
+2011-10-30T22:45:50+00:00 heroku[nginx]: 128.54.47.192 - - [30/Oct/2011:15:45:50 -0700] "GET /fridge_foods/push/2/asdasd/2011/1/1 HTTP/1.1" 500 728 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_2) AppleWebKit/534.51.22 (KHTML, like Gecko) Version/5.1.1 Safari/534.51.22" openfridge.heroku.com
+2011-10-30T22:47:27+00:00 app[web.1]: 
+2011-10-30T22:47:27+00:00 app[web.1]: 
+2011-10-30T22:47:27+00:00 app[web.1]: Started GET "/fridge_foods/push/2/asdasd/2011/1/1" for 128.54.47.192 at 2011-10-30 15:47:27 -0700
+2011-10-30T22:47:27+00:00 app[web.1]:   Processing by FridgeFoodsController#push as HTML
+2011-10-30T22:47:27+00:00 app[web.1]:   Parameters: {"uid"=>"2", "desc"=>"asdasd", "year"=>"2011", "month"=>"1", "day"=>"1"}
+2011-10-30T22:47:27+00:00 app[web.1]: Completed 500 Internal Server Error in 1ms
+2011-10-30T22:47:27+00:00 app[web.1]: 
+2011-10-30T22:47:27+00:00 app[web.1]: ArgumentError (no time information in "//"):
+2011-10-30T22:47:27+00:00 app[web.1]:   app/controllers/fridge_foods_controller.rb:4:in `push'
+2011-10-30T22:47:27+00:00 app[web.1]: 
+2011-10-30T22:47:27+00:00 app[web.1]: 
+2011-10-30T22:47:27+00:00 heroku[router]: GET openfridge.heroku.com/fridge_foods/push/2/asdasd/2011/1/1 dyno=web.1 queue=0 wait=0ms service=7ms status=500 bytes=728
+2011-10-30T22:47:27+00:00 heroku[nginx]: 128.54.47.192 - - [30/Oct/2011:15:47:27 -0700] "GET /fridge_foods/push/2/asdasd/2011/1/1 HTTP/1.1" 500 728 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_2) AppleWebKit/534.51.22 (KHTML, like Gecko) Version/5.1.1 Safari/534.51.22" openfridge.heroku.com
+2011-10-30T22:47:28+00:00 app[web.1]: 
+2011-10-30T22:47:28+00:00 app[web.1]: 
+2011-10-30T22:47:28+00:00 app[web.1]: Started GET "/fridge_foods/push/2/asdasd/2011/1/1" for 128.54.47.192 at 2011-10-30 15:47:28 -0700
+2011-10-30T22:47:28+00:00 app[web.1]:   Processing by FridgeFoodsController#push as HTML
+2011-10-30T22:47:28+00:00 app[web.1]:   Parameters: {"uid"=>"2", "desc"=>"asdasd", "year"=>"2011", "month"=>"1", "day"=>"1"}
+2011-10-30T22:47:28+00:00 app[web.1]: Completed 500 Internal Server Error in 0ms
+2011-10-30T22:47:28+00:00 app[web.1]: 
+2011-10-30T22:47:28+00:00 app[web.1]: ArgumentError (no time information in "//"):
+2011-10-30T22:47:28+00:00 app[web.1]:   app/controllers/fridge_foods_controller.rb:4:in `push'
+2011-10-30T22:47:28+00:00 app[web.1]: 
+2011-10-30T22:47:28+00:00 app[web.1]: 
+2011-10-30T22:47:28+00:00 heroku[router]: GET openfridge.heroku.com/fridge_foods/push/2/asdasd/2011/1/1 dyno=web.1 queue=0 wait=0ms service=16ms status=500 bytes=728
+2011-10-30T22:47:28+00:00 heroku[nginx]: 128.54.47.192 - - [30/Oct/2011:15:47:28 -0700] "GET /fridge_foods/push/2/asdasd/2011/1/1 HTTP/1.1" 500 728 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_2) AppleWebKit/534.51.22 (KHTML, like Gecko) Version/5.1.1 Safari/534.51.22" openfridge.heroku.com
+2011-10-30T22:47:28+00:00 app[web.1]: 
+2011-10-30T22:47:28+00:00 app[web.1]: 
+2011-10-30T22:47:28+00:00 app[web.1]: Started GET "/fridge_foods/push/2/asdasd/2011/1/1" for 128.54.47.192 at 2011-10-30 15:47:28 -0700
+2011-10-30T22:47:28+00:00 app[web.1]:   Processing by FridgeFoodsController#push as HTML
+2011-10-30T22:47:28+00:00 app[web.1]:   Parameters: {"uid"=>"2", "desc"=>"asdasd", "year"=>"2011", "month"=>"1", "day"=>"1"}
+2011-10-30T22:47:28+00:00 app[web.1]: Completed 500 Internal Server Error in 0ms
+2011-10-30T22:47:28+00:00 app[web.1]: 
+2011-10-30T22:47:28+00:00 app[web.1]: ArgumentError (no time information in "//"):
+2011-10-30T22:47:28+00:00 app[web.1]:   app/controllers/fridge_foods_controller.rb:4:in `push'
+2011-10-30T22:47:28+00:00 app[web.1]: 
+2011-10-30T22:47:28+00:00 app[web.1]: 
+2011-10-30T22:47:28+00:00 heroku[router]: GET openfridge.heroku.com/fridge_foods/push/2/asdasd/2011/1/1 dyno=web.1 queue=0 wait=0ms service=5ms status=500 bytes=728
+2011-10-30T22:47:28+00:00 heroku[nginx]: 128.54.47.192 - - [30/Oct/2011:15:47:28 -0700] "GET /fridge_foods/push/2/asdasd/2011/1/1 HTTP/1.1" 500 728 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_2) AppleWebKit/534.51.22 (KHTML, like Gecko) Version/5.1.1 Safari/534.51.22" openfridge.heroku.com

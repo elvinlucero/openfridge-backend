@@ -4274,3 +4274,96 @@ Started GET "/fridge_foods" for 127.0.0.1 at Sun Oct 30 15:37:33 -0700 2011
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
 Rendered fridge_foods/index.html.erb within layouts/application (24.8ms)
 Completed 200 OK in 33ms (Views: 28.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/fridge_foods/push/2/asdasd/2011/1/1" for 127.0.0.1 at Sun Oct 30 15:42:51 -0700 2011
+  Processing by FridgeFoodsController#push as HTML
+  Parameters: {"month"=>"1", "uid"=>"2", "day"=>"1", "year"=>"2011", "desc"=>"asdasd"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+Completed 404 Not Found in 14ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=2):
+  app/controllers/fridge_foods_controller.rb:5:in `push'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.7ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.6ms)
+
+
+Started GET "/fridge_foods/push/1/asdasd/2011/1/1" for 127.0.0.1 at Sun Oct 30 15:43:03 -0700 2011
+  Processing by FridgeFoodsController#push as HTML
+  Parameters: {"month"=>"1", "uid"=>"1", "day"=>"1", "year"=>"2011", "desc"=>"asdasd"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "fridge_foods" ("created_at", "updated_at", "expiration", "desc", "user_id") VALUES ('2011-10-30 22:43:03.205043', '2011-10-30 22:43:03.205043', '2011-10-30 22:43:03.189467', 'asdasd', 1)
+Redirected to http://0.0.0.0:3000/fridge_foods
+Completed 302 Found in 20ms
+
+
+Started GET "/fridge_foods" for 127.0.0.1 at Sun Oct 30 15:43:03 -0700 2011
+  Processing by FridgeFoodsController#index as HTML
+  [1m[36mFridgeFood Load (0.5ms)[0m  [1mSELECT "fridge_foods".* FROM "fridge_foods"[0m
+
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered fridge_foods/index.html.erb within layouts/application (28.5ms)
+Completed 200 OK in 37ms (Views: 32.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/fridge_foods/push/2/asdasd/2011/1/1" for 127.0.0.1 at Sun Oct 30 15:45:18 -0700 2011
+  Processing by FridgeFoodsController#push as HTML
+  Parameters: {"month"=>"1", "uid"=>"2", "day"=>"1", "year"=>"2011", "desc"=>"asdasd"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+Completed 404 Not Found in 10ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=2):
+  app/controllers/fridge_foods_controller.rb:6:in `push'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.6ms)
+
+
+Started GET "/fridge_foods/push/2/asdasd/2011/1/1" for 127.0.0.1 at Sun Oct 30 15:51:25 -0700 2011
+  Processing by FridgeFoodsController#push as HTML
+  Parameters: {"month"=>"1", "uid"=>"2", "day"=>"1", "year"=>"2011", "desc"=>"asdasd"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+Completed 404 Not Found in 14ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=2):
+  app/controllers/fridge_foods_controller.rb:6:in `push'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.9ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.3ms)
+
+
+Started GET "/fridge_foods/push/1/asdasd/2011/1/1" for 127.0.0.1 at Sun Oct 30 15:51:30 -0700 2011
+  Processing by FridgeFoodsController#push as HTML
+  Parameters: {"month"=>"1", "uid"=>"1", "day"=>"1", "year"=>"2011", "desc"=>"asdasd"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mAREL (0.7ms)[0m  [1mINSERT INTO "fridge_foods" ("desc", "updated_at", "expiration", "user_id", "created_at") VALUES ('asdasd', '2011-10-30 22:51:30.525437', '2011-01-01 08:00:00.000000', 1, '2011-10-30 22:51:30.525437')[0m
+Redirected to http://0.0.0.0:3000/fridge_foods
+Completed 302 Found in 63ms
+
+
+Started GET "/fridge_foods" for 127.0.0.1 at Sun Oct 30 15:51:30 -0700 2011
+  Processing by FridgeFoodsController#index as HTML
+  [1m[35mFridgeFood Load (0.5ms)[0m  SELECT "fridge_foods".* FROM "fridge_foods"
+
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered fridge_foods/index.html.erb within layouts/application (31.3ms)
+Completed 200 OK in 40ms (Views: 34.5ms | ActiveRecord: 1.7ms)

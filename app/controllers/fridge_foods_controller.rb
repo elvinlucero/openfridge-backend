@@ -1,7 +1,8 @@
 class FridgeFoodsController < ApplicationController
-  
+  require 'time' 
   def push
-   exp = Time.parse("#{@day}/#{@month}/#{@year}")
+   exp = Time.parse("#{params[:day]}/#{params[:month]}/#{params[:year]}")
+   puts exp
    @fridge_food = FridgeFood.create([:desc => params[:desc], :expiration => exp, :user => User.find(params[:uid])])
    redirect_to :controller => "fridge_foods"  
   end
