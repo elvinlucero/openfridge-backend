@@ -11,9 +11,11 @@ class FridgeFoodsController < ApplicationController
   def index
     @fridge_foods = FridgeFood.all
 
+    logger.debug @fridge_food
+    
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @fridge_foods }
+      format.xml  # { render :xml => @fridge_foods }
     end
   end
 
@@ -21,6 +23,8 @@ class FridgeFoodsController < ApplicationController
   # GET /fridge_foods/1.xml
   def show
     @fridge_food = FridgeFood.find(params[:id])
+
+    RAILS_DEFAULT_LOGGER.debug @fridge_food
 
     respond_to do |format|
       format.html # show.html.erb

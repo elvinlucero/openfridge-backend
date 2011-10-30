@@ -17,6 +17,9 @@ Openfridge::Application.routes.draw do
 
   match "fridge_foods/push?" => "fridge_foods#push"
   match "fridge_foods/push/:uid/:desc/:year/:month/:day" => "fridge_foods#push"
+  
+  match "saved_foods/push?" => "saved_foods#push"
+  match "saved_foods/push/:uid/:desc/:year/:month/:day" => "saved_foods#push"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
