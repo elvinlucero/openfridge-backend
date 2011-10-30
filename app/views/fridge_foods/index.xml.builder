@@ -18,11 +18,13 @@ xml.fridge_foods do
       end
     end
   end
-  @fridge_foods.find_all{|f| f.expiration != nil && (f.expiration - Date.current()).floor < 0}.each do |f|
-    xml.expired do
-      xml.desc f.desc
-      xml.user_id f.user_id
-      xml.expiration f.expiration
+  xml.expired do
+    @fridge_foods.find_all{|f| f.expiration != nil && (f.expiration - Date.current()).floor < 0}.each do |f|
+      xml.food do
+        xml.desc f.desc
+        xml.user_id f.user_id
+        xml.expiration f.expiration
+      end
     end
   end
 end
