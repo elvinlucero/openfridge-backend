@@ -9,7 +9,7 @@
 <% @fridge_foods.find_all{|f| f.expiration != nil && (f.expiration - Date.current()).floor < 3 && (f.expiration - Date.current()).floor >= 0}.each do |f| %>
   <tr>
     <td><%= f.desc %></td>
-    <td><%= (f.expiration - Date.current()).to_s + " days left" %></td>
+    <td><%= (f.expiration - Date.current()).to_int.to_s + " days left" %></td>
     <td><%= link_to 'Delete', f, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
@@ -21,7 +21,7 @@
 <% @fridge_foods.find_all{|f| f.expiration != nil && (f.expiration - Date.current()).floor < 0}.each do |f| %>
   <tr>
     <td><%= f.desc %></td>
-    <td><%= (f.expiration - Date.current()).abs.to_s + " days expired" %></td>
+    <td><%= (f.expiration - Date.current()).to_int.abs.to_s + " days expired" %></td>
     <td><%= link_to 'Delete', f, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
@@ -34,7 +34,7 @@
 <% @fridge_foods.find_all{|f| f.expiration != nil && (f.expiration - Date.current()).floor > 3}.each do |f| %>
   <tr>
     <td><%= f.desc %></td>
-    <td><%= (f.expiration - Date.current()).to_s + " days left"  %></td>
+    <td><%= (f.expiration - Date.current()).to_int.to_s + " days left"  %></td>
     <td><%= link_to 'Delete', f, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
