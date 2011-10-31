@@ -1,27 +1,46 @@
-<h1>Listing fridge_foods</h1>
+<h1>Expiry List</h1>
 
-<table>
-  <tr>
-    <th>Desc</th>
+<table class="fridge_foods">
+  <tr class="near">
+    <th>Item</th>
     <th>Expiration</th>
-    <th>User</th>
-    <th></th>
-    <th></th>
     <th></th>
   </tr>
-
-<% @fridge_foods.each do |fridge_food| %>
+<% @fridge_foods.find_all{|f| f.expiration != nil && (f.expiration - Date.current()).floor < 3 && (f.expiration - Date.current()).floor >= 0}.each do |f| %>
   <tr>
-    <td><%= fridge_food.desc %></td>
-    <td><%= fridge_food.expiration %></td>
-    <td><%= fridge_food.user %></td>
-    <td><%= link_to 'Show', fridge_food %></td>
-    <td><%= link_to 'Edit', edit_fridge_food_path(fridge_food) %></td>
-    <td><%= link_to 'Destroy', fridge_food, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= f.desc %></td>
+    <td><%= (f.expiration - Date.current()).to_s + " days left" %></td>
+    <td><%= link_to 'Delete', f, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
+  <tr class="expired">
+    <th>Item</th>
+    <th>Expiration</th>
+    <th></th>
+  </tr>
+<% @fridge_foods.find_all{|f| f.expiration != nil && (f.expiration - Date.current()).floor < 0}.each do |f| %>
+  <tr>
+    <td><%= f.desc %></td>
+    <td><%= (f.expiration - Date.current()).abs.to_s + " days expired" %></td>
+    <td><%= link_to 'Delete', f, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+  
+  <tr class="good">
+    <th>Item</th>
+    <th>Expiration</th>
+    <th></th>
+  </tr>
+<% @fridge_foods.find_all{|f| f.expiration != nil && (f.expiration - Date.current()).floor > 3}.each do |f| %>
+  <tr>
+    <td><%= f.desc %></td>
+    <td><%= (f.expiration - Date.current()).to_s + " days left"  %></td>
+    <td><%= link_to 'Delete', f, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+  
 </table>
 
 <br />
 
-<%= link_to 'New Fridge food', new_fridge_food_path %>
+<%= link_to 'Add item', new_fridge_food_path %>
