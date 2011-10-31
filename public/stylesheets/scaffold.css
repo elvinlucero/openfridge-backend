@@ -14,7 +14,7 @@ pre {
 
 a { color: #000; }
 a:visited { color: #666; }
-a:hover { color: #fff; background-color:#000; }
+a:hover { color: #fff; }
 
 div.field, div.actions {
   margin-bottom: 10px;
@@ -78,3 +78,28 @@ table.fridge_foods tr.near th {
     background-color: #E6B426;
     color: #fff;
 }
+
+.big_button {
+}
+
+.big_button a {
+    display: block;
+    width: 200px;
+    height: 50px;
+    background-color: #0a0;
+    font-size: 32px;
+    color: #fff;
+    padding-top: 25px;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+}
+
+.big_button a:visited {
+    color: #fff;
+}
+.big_button a:hover {
+    color: #fff;
+    background-color: #0f0;
+}
+
