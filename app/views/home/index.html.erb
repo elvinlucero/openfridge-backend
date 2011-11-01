@@ -1,6 +1,5 @@
 
 
-<center>
 <% if (session[:user_id] == nil) %>
 Please select user.
 <%
@@ -14,7 +13,6 @@ end
 
 %>
 <% else %>
-Hello  
+Hello <%= link_to session[:uname].to_s, :controller => 'users' %> 
 
 <% end %>
-</center>

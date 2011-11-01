@@ -6611,3 +6611,450 @@ Started GET "/fridge_foods/new" for 127.0.0.1 at Mon Oct 31 16:29:57 -0700 2011
 Rendered fridge_foods/_form.html.erb (53.3ms)
 Rendered fridge_foods/new.html.erb within layouts/application (56.5ms)
 Completed 200 OK in 66ms (Views: 61.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Oct 31 16:31:40 -0700 2011
+  Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+Rendered home/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 15ms (Views: 8.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/fridge_foods" for 127.0.0.1 at Mon Oct 31 16:31:42 -0700 2011
+  Processing by FridgeFoodsController#index as HTML
+  [1m[36mFridgeFood Load (0.5ms)[0m  [1mSELECT "fridge_foods".* FROM "fridge_foods"[0m
+
+Rendered fridge_foods/index.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 22ms (Views: 16.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Oct 31 16:39:11 -0700 2011
+  Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+Rendered home/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 19ms (Views: 11.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at Mon Oct 31 16:39:13 -0700 2011
+  Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Rendered home/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 14ms (Views: 7.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at Mon Oct 31 16:39:40 -0700 2011
+  Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+Rendered home/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 18ms (Views: 9.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at Mon Oct 31 16:39:41 -0700 2011
+  Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Rendered home/index.html.erb within layouts/application (42.2ms)
+Completed 200 OK in 56ms (Views: 47.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at Mon Oct 31 16:39:54 -0700 2011
+  Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+Rendered home/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 19ms (Views: 10.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at Mon Oct 31 16:40:06 -0700 2011
+  Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Rendered home/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 56ms (Views: 48.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at Mon Oct 31 16:40:14 -0700 2011
+  Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+Rendered home/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 18ms (Views: 10.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at Mon Oct 31 16:40:37 -0700 2011
+  Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Rendered home/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 58ms (Views: 9.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at Mon Oct 31 16:41:04 -0700 2011
+  Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+Rendered home/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 19ms (Views: 11.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/set?id=1&uname=elvin" for 127.0.0.1 at Mon Oct 31 16:41:05 -0700 2011
+  Processing by UsersController#set as HTML
+  Parameters: {"uname"=>"elvin", "id"=>"1"}
+Redirected to http://0.0.0.0:3000/home/index
+Completed 302 Found in 0ms
+
+
+Started GET "/home/index" for 127.0.0.1 at Mon Oct 31 16:41:05 -0700 2011
+  Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Rendered home/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 12ms (Views: 5.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at Mon Oct 31 16:41:14 -0700 2011
+  Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+Rendered home/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 13ms (Views: 6.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at Mon Oct 31 16:41:15 -0700 2011
+  Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Rendered home/index.html.erb within layouts/application (41.6ms)
+Completed 200 OK in 53ms (Views: 46.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at Mon Oct 31 16:41:40 -0700 2011
+  Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+Rendered home/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 16ms (Views: 8.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at Mon Oct 31 16:42:27 -0700 2011
+  Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Rendered home/index.html.erb within layouts/application (56.4ms)
+Completed 500 Internal Server Error in 76ms
+
+ActionView::Template::Error (undefined method `User' for #<#<Class:0x110a6e0d0>:0x110a68b30>):
+    13: 
+    14: %>
+    15: <% else %>
+    16: Hello <%= link_to session[:uname].to_s, User(session[:user_id]) %> 
+    17: 
+    18: <% end %>
+  app/views/home/index.html.erb:16:in `_app_views_home_index_html_erb___626748414_2287142820_0'
+  app/controllers/home_controller.rb:4:in `index'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.5ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.8ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at Mon Oct 31 16:42:55 -0700 2011
+  Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+Rendered home/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 22ms (Views: 11.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home/index?%23%3CHomeController%3A0x110bdb0d0%3E=user" for 127.0.0.1 at Mon Oct 31 16:42:57 -0700 2011
+  Processing by HomeController#index as HTML
+  Parameters: {"#<HomeController:0x110bdb0d0>"=>"user"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Rendered home/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 52ms (Views: 44.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/home/index?%23%3CHomeController%3A0x1109e37a0%3E=user" for 127.0.0.1 at Mon Oct 31 16:42:59 -0700 2011
+  Processing by HomeController#index as HTML
+  Parameters: {"#<HomeController:0x1109e37a0>"=>"user"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+Rendered home/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 17ms (Views: 8.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home/index?%23%3CHomeController%3A0x1109e37a0%3E=user" for 127.0.0.1 at Mon Oct 31 16:43:11 -0700 2011
+  Processing by HomeController#index as HTML
+  Parameters: {"#<HomeController:0x1109e37a0>"=>"user"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Rendered home/index.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 14ms
+
+ActionView::Template::Error (No route matches {:controller=>"user"}):
+    13: 
+    14: %>
+    15: <% else %>
+    16: Hello <%= link_to session[:uname].to_s, :controller => 'user' %> 
+    17: 
+    18: <% end %>
+  app/views/home/index.html.erb:16:in `_app_views_home_index_html_erb___626748414_2287680000_0'
+  app/controllers/home_controller.rb:4:in `index'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (7.3ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Oct 31 16:43:14 -0700 2011
+  Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+Rendered home/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (No route matches {:controller=>"user"}):
+    13: 
+    14: %>
+    15: <% else %>
+    16: Hello <%= link_to session[:uname].to_s, :controller => 'user' %> 
+    17: 
+    18: <% end %>
+  app/views/home/index.html.erb:16:in `_app_views_home_index_html_erb___626748414_2286393500_0'
+  app/controllers/home_controller.rb:4:in `index'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (7.0ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Oct 31 16:43:51 -0700 2011
+  Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Rendered home/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 17ms (Views: 8.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at Mon Oct 31 16:43:53 -0700 2011
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+Rendered users/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 19ms (Views: 11.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at Mon Oct 31 16:44:03 -0700 2011
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Rendered users/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 16ms (Views: 9.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/fridge_foods" for 127.0.0.1 at Mon Oct 31 16:44:19 -0700 2011
+  Processing by FridgeFoodsController#index as HTML
+  [1m[35mFridgeFood Load (0.5ms)[0m  SELECT "fridge_foods".* FROM "fridge_foods"
+
+Rendered fridge_foods/index.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 23ms (Views: 16.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/fridge_foods.xml" for 127.0.0.1 at Mon Oct 31 16:44:26 -0700 2011
+  Processing by FridgeFoodsController#index as XML
+  [1m[36mFridgeFood Load (0.5ms)[0m  [1mSELECT "fridge_foods".* FROM "fridge_foods"[0m
+
+Rendered fridge_foods/index.xml.builder (120.0ms)
+Completed 200 OK in 131ms (Views: 125.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Oct 31 17:54:54 -0700 2011
+  Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+Rendered home/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 13ms (Views: 5.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/fridge_foods" for 127.0.0.1 at Mon Oct 31 17:54:57 -0700 2011
+  Processing by FridgeFoodsController#index as HTML
+  [1m[36mFridgeFood Load (0.7ms)[0m  [1mSELECT "fridge_foods".* FROM "fridge_foods"[0m
+
+Rendered fridge_foods/index.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 27ms (Views: 19.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/fridge_foods" for 127.0.0.1 at Mon Oct 31 17:55:28 -0700 2011
+  Processing by FridgeFoodsController#index as HTML
+  [1m[35mFridgeFood Load (0.5ms)[0m  SELECT "fridge_foods".* FROM "fridge_foods"
+
+Rendered fridge_foods/index.html.erb within layouts/application (57.6ms)
+Completed 200 OK in 69ms (Views: 63.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Oct 31 17:55:31 -0700 2011
+  Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Rendered home/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 14ms (Views: 7.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/fridge_foods/1.xml" for 127.0.0.1 at Mon Oct 31 17:55:51 -0700 2011
+  Processing by FridgeFoodsController#show as XML
+  Parameters: {"id"=>"1"}
+  [1m[35mFridgeFood Load (0.1ms)[0m  SELECT "fridge_foods".* FROM "fridge_foods" WHERE "fridge_foods"."id" = 1 LIMIT 1
+DEPRECATION WARNING: RAILS_DEFAULT_LOGGER is deprecated. Please use ::Rails.logger. (called from show at /Users/elvinlucero/Projects/openfridge/app/controllers/fridge_foods_controller.rb:28)
+#<FridgeFood:0x110b25a28>
+Completed 200 OK in 12ms (Views: 6.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/fridge_foods" for 127.0.0.1 at Mon Oct 31 18:00:52 -0700 2011
+  Processing by FridgeFoodsController#index as HTML
+  [1m[36mFridgeFood Load (0.5ms)[0m  [1mSELECT "fridge_foods".* FROM "fridge_foods"[0m
+
+Rendered fridge_foods/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 19ms (Views: 14.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1/fridge_foods" for 127.0.0.1 at Mon Oct 31 18:01:04 -0700 2011
+
+ActionController::RoutingError (No route matches "/users/1/fridge_foods"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/user/1/fridge_foods" for 127.0.0.1 at Mon Oct 31 18:01:18 -0700 2011
+  Processing by FridgeFoodsController#getfoods as HTML
+  Parameters: {"uid"=>"1"}
+  [1m[35mFridgeFood Load (0.2ms)[0m  SELECT "fridge_foods".* FROM "fridge_foods" WHERE "fridge_foods"."user_id" = 1 LIMIT 1
+
+Completed 500 Internal Server Error in 33ms
+
+ActionView::MissingTemplate (Missing template fridge_foods/getfoods with {:handlers=>[:rjs, :rhtml, :rxml, :builder, :erb], :formats=>[:html], :locale=>[:en, :en]} in view paths "/Users/elvinlucero/Projects/openfridge/app/views"):
+  app/controllers/fridge_foods_controller.rb:15:in `getfoods'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.4ms)
+
+
+Started GET "/user/1/fridge_foods" for 127.0.0.1 at Mon Oct 31 18:02:18 -0700 2011
+  Processing by FridgeFoodsController#getfoods as HTML
+  Parameters: {"uid"=>"1"}
+  [1m[36mFridgeFood Load (0.1ms)[0m  [1mSELECT "fridge_foods".* FROM "fridge_foods" WHERE "fridge_foods"."user_id" = 1 LIMIT 1[0m
+
+Completed 500 Internal Server Error in 10ms
+
+ActionView::MissingTemplate (Missing template fridge_foods/getfoods with {:handlers=>[:rjs, :rhtml, :rxml, :builder, :erb], :formats=>[:html], :locale=>[:en, :en]} in view paths "/Users/elvinlucero/Projects/openfridge/app/views"):
+  app/controllers/fridge_foods_controller.rb:15:in `getfoods'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.5ms)
+
+
+Started GET "/user/1/fridge_foods" for 127.0.0.1 at Mon Oct 31 18:02:19 -0700 2011
+  Processing by FridgeFoodsController#getfoods as HTML
+  Parameters: {"uid"=>"1"}
+  [1m[35mFridgeFood Load (0.2ms)[0m  SELECT "fridge_foods".* FROM "fridge_foods" WHERE "fridge_foods"."user_id" = 1 LIMIT 1
+
+Completed 500 Internal Server Error in 11ms
+
+ActionView::MissingTemplate (Missing template fridge_foods/getfoods with {:handlers=>[:rjs, :rhtml, :rxml, :builder, :erb], :formats=>[:html], :locale=>[:en, :en]} in view paths "/Users/elvinlucero/Projects/openfridge/app/views"):
+  app/controllers/fridge_foods_controller.rb:15:in `getfoods'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.5ms)
+
+
+Started GET "/user/1/fridge_foods" for 127.0.0.1 at Mon Oct 31 18:02:19 -0700 2011
+  Processing by FridgeFoodsController#getfoods as HTML
+  Parameters: {"uid"=>"1"}
+  [1m[36mFridgeFood Load (0.1ms)[0m  [1mSELECT "fridge_foods".* FROM "fridge_foods" WHERE "fridge_foods"."user_id" = 1 LIMIT 1[0m
+
+Completed 500 Internal Server Error in 8ms
+
+ActionView::MissingTemplate (Missing template fridge_foods/getfoods with {:handlers=>[:rjs, :rhtml, :rxml, :builder, :erb], :formats=>[:html], :locale=>[:en, :en]} in view paths "/Users/elvinlucero/Projects/openfridge/app/views"):
+  app/controllers/fridge_foods_controller.rb:15:in `getfoods'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.5ms)
+
+
+Started GET "/user/1/fridge_foods" for 127.0.0.1 at Mon Oct 31 18:02:19 -0700 2011
+  Processing by FridgeFoodsController#getfoods as HTML
+  Parameters: {"uid"=>"1"}
+  [1m[35mFridgeFood Load (0.1ms)[0m  SELECT "fridge_foods".* FROM "fridge_foods" WHERE "fridge_foods"."user_id" = 1 LIMIT 1
+
+Completed 500 Internal Server Error in 8ms
+
+ActionView::MissingTemplate (Missing template fridge_foods/getfoods with {:handlers=>[:rjs, :rhtml, :rxml, :builder, :erb], :formats=>[:html], :locale=>[:en, :en]} in view paths "/Users/elvinlucero/Projects/openfridge/app/views"):
+  app/controllers/fridge_foods_controller.rb:15:in `getfoods'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.4ms)
+
+
+Started GET "/user/1/fridge_foods" for 127.0.0.1 at Mon Oct 31 18:02:19 -0700 2011
+  Processing by FridgeFoodsController#getfoods as HTML
+  Parameters: {"uid"=>"1"}
+  [1m[36mFridgeFood Load (0.3ms)[0m  [1mSELECT "fridge_foods".* FROM "fridge_foods" WHERE "fridge_foods"."user_id" = 1 LIMIT 1[0m
+
+Completed 500 Internal Server Error in 54ms
+
+ActionView::MissingTemplate (Missing template fridge_foods/getfoods with {:handlers=>[:rjs, :rhtml, :rxml, :builder, :erb], :formats=>[:html], :locale=>[:en, :en]} in view paths "/Users/elvinlucero/Projects/openfridge/app/views"):
+  app/controllers/fridge_foods_controller.rb:15:in `getfoods'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.4ms)
+
+
+Started GET "/user/1/fridge_foods" for 127.0.0.1 at Mon Oct 31 18:02:19 -0700 2011
+  Processing by FridgeFoodsController#getfoods as HTML
+  Parameters: {"uid"=>"1"}
+  [1m[35mFridgeFood Load (0.1ms)[0m  SELECT "fridge_foods".* FROM "fridge_foods" WHERE "fridge_foods"."user_id" = 1 LIMIT 1
+
+Completed 500 Internal Server Error in 9ms
+
+ActionView::MissingTemplate (Missing template fridge_foods/getfoods with {:handlers=>[:rjs, :rhtml, :rxml, :builder, :erb], :formats=>[:html], :locale=>[:en, :en]} in view paths "/Users/elvinlucero/Projects/openfridge/app/views"):
+  app/controllers/fridge_foods_controller.rb:15:in `getfoods'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.8ms)
+
+
+Started GET "/user/1/fridge_foods" for 127.0.0.1 at Mon Oct 31 18:02:19 -0700 2011
+  Processing by FridgeFoodsController#getfoods as HTML
+  Parameters: {"uid"=>"1"}
+  [1m[36mFridgeFood Load (0.1ms)[0m  [1mSELECT "fridge_foods".* FROM "fridge_foods" WHERE "fridge_foods"."user_id" = 1 LIMIT 1[0m
+
+Completed 500 Internal Server Error in 8ms
+
+ActionView::MissingTemplate (Missing template fridge_foods/getfoods with {:handlers=>[:rjs, :rhtml, :rxml, :builder, :erb], :formats=>[:html], :locale=>[:en, :en]} in view paths "/Users/elvinlucero/Projects/openfridge/app/views"):
+  app/controllers/fridge_foods_controller.rb:15:in `getfoods'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.4ms)
+
+
+Started GET "/user/1/fridge_foods.xml" for 127.0.0.1 at Mon Oct 31 18:03:00 -0700 2011
+  Processing by FridgeFoodsController#getfoods as XML
+  Parameters: {"uid"=>"1"}
+  [1m[35mFridgeFood Load (0.2ms)[0m  SELECT "fridge_foods".* FROM "fridge_foods" WHERE "fridge_foods"."user_id" = 1 LIMIT 1
+
+Rendered fridge_foods/getfoods.xml.builder (6.5ms)
+Completed 500 Internal Server Error in 19ms
+
+ActionView::Template::Error (undefined method `find_all' for #<FridgeFood:0x110864528>):
+    1: xml.instruct!
+    2: xml.fridge_foods do
+    3:   xml.good do
+    4:     @fridge_foods.find_all{|f| f.expiration != nil && (f.expiration - Date.current()).floor > 3}.each do |f|
+    5:       xml.food do
+    6:         xml.desc f.desc
+    7:         xml.user_id f.user_id
+  app/views/fridge_foods/getfoods.xml.builder:4:in `_app_views_fridge_foods_getfoods_xml_builder__1491828201_2286086420_0'
+  app/views/fridge_foods/getfoods.xml.builder:3:in `_app_views_fridge_foods_getfoods_xml_builder__1491828201_2286086420_0'
+  app/views/fridge_foods/getfoods.xml.builder:2:in `_app_views_fridge_foods_getfoods_xml_builder__1491828201_2286086420_0'
+  app/controllers/fridge_foods_controller.rb:15:in `getfoods'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.9ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.2ms)
+
+
+Started GET "/fridge_foods/1.xml" for 127.0.0.1 at Mon Oct 31 18:04:22 -0700 2011
+  Processing by FridgeFoodsController#show as XML
+  Parameters: {"id"=>"1"}
+  [1m[36mFridgeFood Load (0.1ms)[0m  [1mSELECT "fridge_foods".* FROM "fridge_foods" WHERE "fridge_foods"."id" = 1 LIMIT 1[0m
+#<FridgeFood:0x110c7c4d0>
+Completed 200 OK in 13ms (Views: 6.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/fridge_foods/1.xml" for 127.0.0.1 at Mon Oct 31 18:04:23 -0700 2011
+  Processing by FridgeFoodsController#show as XML
+  Parameters: {"id"=>"1"}
+  [1m[35mFridgeFood Load (0.1ms)[0m  SELECT "fridge_foods".* FROM "fridge_foods" WHERE "fridge_foods"."id" = 1 LIMIT 1
+#<FridgeFood:0x110b6b140>
+Completed 200 OK in 11ms (Views: 5.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/user/1/fridge_foods.xml" for 127.0.0.1 at Mon Oct 31 18:04:31 -0700 2011
+  Processing by FridgeFoodsController#getfoods as XML
+  Parameters: {"uid"=>"1"}
+  [1m[36mFridgeFood Load (0.4ms)[0m  [1mSELECT "fridge_foods".* FROM "fridge_foods" WHERE "fridge_foods"."user_id" = 1[0m
+
+Rendered fridge_foods/getfoods.xml.builder (10.0ms)
+Completed 200 OK in 22ms (Views: 14.6ms | ActiveRecord: 0.4ms)

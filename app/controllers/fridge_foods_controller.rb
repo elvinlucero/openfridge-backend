@@ -6,7 +6,18 @@ class FridgeFoodsController < ApplicationController
    @fridge_food = FridgeFood.create([:desc => params[:desc], :expiration => exp, :user => User.find(params[:uid])])
    redirect_to :controller => "fridge_foods"  
   end
-  
+
+  def getfoods
+    @fridge_foods = FridgeFood.find_all_by_user_id(params[:uid])
+
+    logger.debug @fridge_food
+    
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  # { render :xml => @fridge_foods }
+    end
+  end
+
   # GET /fridge_foods
   # GET /fridge_foods.xml
   def index
