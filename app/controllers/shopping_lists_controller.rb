@@ -1,4 +1,22 @@
 class ShoppingListsController < ApplicationController
+  def kill
+   @shopping_lists = ShoppingList.delete_all("user_id = " + params[:uid])
+   redirect_to :controller => "shopping_lists"  
+  end
+
+  def push
+   @shopping_list = ShoppingList.create([:desc => params[:desc], :user => User.find(params[:uid])])
+   redirect_to :controller => "shopping_lists"  
+  end
+  
+  def getfoods
+    @shopping_lists = ShoppingList.find_all_by_user_id(params[:uid])
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  # { render :xml => @fridge_foods }
+    end
+  end
+  
   # GET /shopping_lists
   # GET /shopping_lists.xml
   def index

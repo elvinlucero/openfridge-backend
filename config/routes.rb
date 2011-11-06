@@ -1,5 +1,5 @@
 Openfridge::Application.routes.draw do
-  resources :logs
+resources :logs
 
   resources :saved_foods
 
@@ -15,13 +15,21 @@ Openfridge::Application.routes.draw do
 
   match "set" => "users#set"
 
+  # Fridge food routes
   match "fridge_foods/push?" => "fridge_foods#push"
   match "fridge_foods/push/:uid/:desc/:year/:month/:day" => "fridge_foods#push"
+  match "users/:uid/fridge_foods" => "fridge_foods#getfoods"
   
+  # Saved food routes
   match "saved_foods/push?" => "saved_foods#push"
   match "saved_foods/push/:uid/:desc/:year/:month/:day" => "saved_foods#push"
+ 
+  # Shopping list routes
+  match "shopping_lists/push?" => "shopping_lists#push"
+  match "shopping_lists/push/:uid/:desc" => "shopping_lists#push"
+  match "users/:uid/shopping_lists" => "shopping_lists#getfoods"
+  match "users/:uid/shopping_lists/kill" => "shopping_lists#kill"
 
-  match "user/:uid/fridge_foods" => "fridge_foods#getfoods"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
