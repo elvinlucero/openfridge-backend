@@ -16,12 +16,11 @@
     <%= f.text_field :desc %>
   </div>
   <div class="field">
-    <%= f.label :expiration %><br />
-    <%= f.date_select :expiration %>
+    <%= f.label :offset %><br />
+    <%= f.text_field :offset %>
   </div>
   <div class="field">
-    <%= f.label :user %><br />
-    <%= f.text_field :user %>
+    <%= f.hidden_field :user_id, :value => session[:user_id] %>
   </div>
   <div class="actions">
     <%= f.submit %>

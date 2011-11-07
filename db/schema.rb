@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(:version => 20111014174662) do
 
   create_table "saved_foods", :force => true do |t|
     t.string   "desc"
-    t.date     "expiration"
+    t.integer  "offset"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"

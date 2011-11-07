@@ -81,15 +81,23 @@ class FridgeFoodsController < ApplicationController
   def update
     @fridge_food = FridgeFood.find(params[:id])
 
-    respond_to do |format|
-      if @fridge_food.update_attributes(params[:fridge_food])
-        format.html { redirect_to(@fridge_food, :notice => 'Fridge food was successfully updated.') }
-        format.xml  { head :ok }
-      else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @fridge_food.errors, :status => :unprocessable_entity }
-      end
-    end
+    exp = Time.parse("#{params[:day]}/#{params[:month]}/#{params[:year]}")
+    
+    @fridge_food.update_attributes(:desc => params[:desc], :expiration => exp)
+    @fridge_food.save! 
+    redirect_to :controller => "fridge_foods"  
+  end
+
+  def eat 
+    @fridge_food = FridgeFood.find(params[:id])
+    @fridge_food.destroy
+    redirect_to :controller => "fridge_foods"  
+  end
+
+  def throw
+    @fridge_food = FridgeFood.find(params[:id])
+    @fridge_food.destroy
+    redirect_to :controller => "fridge_foods"  
   end
 
   # DELETE /fridge_foods/1

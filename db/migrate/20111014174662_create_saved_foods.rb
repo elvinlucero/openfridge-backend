@@ -3,7 +3,7 @@ class CreateSavedFoods < ActiveRecord::Migration
   def self.up
     create_table :saved_foods do |t|
       t.string :desc
-      t.date :expiration
+      t.integer :offset
       t.references :user
 
       t.timestamps
@@ -13,7 +13,7 @@ class CreateSavedFoods < ActiveRecord::Migration
   def self.change
     create_table :saved_foods do |t|
       t.string :desc
-      t.date :expiration
+      t.integer :offset
       t.references :user
 
       t.timestamps

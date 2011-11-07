@@ -13,7 +13,7 @@
 <% @saved_foods.each do |saved_food| %>
   <tr>
     <td><%= saved_food.desc %></td>
-    <td><%= saved_food.expiration %></td>
+    <td><%= saved_food.offset %></td>
     <td><%= saved_food.user %></td>
     <td><%= link_to 'Show', saved_food %></td>
     <td><%= link_to 'Edit', edit_saved_food_path(saved_food) %></td>
