@@ -30,6 +30,7 @@ resources :logs
   # Shopping list routes
   match "shopping_lists/push?" => "shopping_lists#push"
   match "shopping_lists/push/:uid/:desc" => "shopping_lists#push"
+  match "shopping_lists/destroy/:id" => "shopping_lists#destroy"
   match "users/:uid/shopping_lists" => "shopping_lists#getfoods"
   match "users/:uid/shopping_lists/kill" => "shopping_lists#kill"
 
