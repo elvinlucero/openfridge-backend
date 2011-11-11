@@ -1,10 +1,10 @@
 class FridgeFoodsController < ApplicationController
   require 'time' 
   def push
-   exp = Time.parse("#{params[:day]}/#{params[:month]}/#{params[:year]}")
-   puts exp
-   @fridge_food = FridgeFood.create([:desc => params[:desc], :expiration => exp, :user => User.find(params[:uid])])
-   redirect_to :controller => "fridge_foods"  
+    exp = Time.parse("#{params[:day]}/#{params[:month]}/#{params[:year]}")
+    puts exp
+    @fridge_food = FridgeFood.create([:desc => params[:desc], :expiration => exp, :user => User.find(params[:uid])])
+    redirect_to @fridge_food
   end
 
   def getfoods
@@ -36,10 +36,8 @@ class FridgeFoodsController < ApplicationController
   def show
     @fridge_food = FridgeFood.find(params[:id])
 
-    RAILS_DEFAULT_LOGGER.debug @fridge_food
-
     respond_to do |format|
-      format.html # show.html.erb
+      format.html { render :inline => @fridge_food.id.to_s }
       format.xml  { render :xml => @fridge_food }
     end
   end

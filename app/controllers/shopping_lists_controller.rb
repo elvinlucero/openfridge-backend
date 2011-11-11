@@ -6,7 +6,7 @@ class ShoppingListsController < ApplicationController
 
   def push
    @shopping_list = ShoppingList.create([:desc => params[:desc], :user => User.find(params[:uid])])
-   redirect_to :controller => "shopping_lists"  
+   redirect_to @shopping_list 
   end
   
   def getfoods
@@ -23,7 +23,7 @@ class ShoppingListsController < ApplicationController
     @shopping_lists = ShoppingList.all
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html { render :inline => @shopping_lists.id.to_s }
       format.xml  { render :xml => @shopping_lists }
     end
   end
