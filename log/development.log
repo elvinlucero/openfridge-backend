@@ -9927,3 +9927,126 @@ Started GET "/fridge_foods" for 127.0.0.1 at Fri Nov 11 14:39:12 -0800 2011
 
 Rendered fridge_foods/index.html.erb within layouts/application (13.6ms)
 Completed 200 OK in 22ms (Views: 17.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/fridge_foods/15/1/eat" for 127.0.0.1 at Fri Nov 11 14:41:54 -0800 2011
+  Processing by FridgeFoodsController#eat as HTML
+  Parameters: {"uid"=>"1", "id"=>"15"}
+  [1m[36mFridgeFood Load (0.1ms)[0m  [1mSELECT "fridge_foods".* FROM "fridge_foods" WHERE "fridge_foods"."id" = 15 LIMIT 1[0m
+Completed 404 Not Found in 6ms
+
+ActiveRecord::RecordNotFound (Couldn't find FridgeFood with ID=15):
+  app/controllers/fridge_foods_controller.rb:98:in `eat'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.5ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.4ms)
+
+
+Started GET "/fridge_foods/15/1/eat" for 127.0.0.1 at Fri Nov 11 14:42:17 -0800 2011
+  Processing by FridgeFoodsController#eat as HTML
+  Parameters: {"uid"=>"1", "id"=>"15"}
+  [1m[35mFridgeFood Load (0.1ms)[0m  SELECT "fridge_foods".* FROM "fridge_foods" WHERE "fridge_foods"."id" = 15 LIMIT 1
+Completed 404 Not Found in 5ms
+
+ActiveRecord::RecordNotFound (Couldn't find FridgeFood with ID=15):
+  app/controllers/fridge_foods_controller.rb:98:in `eat'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.2ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.7ms)
+
+
+Started GET "/fridge_foods/18/1/eat" for 127.0.0.1 at Fri Nov 11 14:42:22 -0800 2011
+  Processing by FridgeFoodsController#eat as HTML
+  Parameters: {"uid"=>"1", "id"=>"18"}
+  [1m[36mFridgeFood Load (0.1ms)[0m  [1mSELECT "fridge_foods".* FROM "fridge_foods" WHERE "fridge_foods"."id" = 18 LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "logs" ("updated_at", "action", "user_id", "created_at") VALUES ('2011-11-11 22:42:22.237884', 'eat', 1, '2011-11-11 22:42:22.237884')
+  [1m[36mAREL (0.3ms)[0m  [1mDELETE FROM "fridge_foods" WHERE "fridge_foods"."id" = 18[0m
+Redirected to http://0.0.0.0:3000/fridge_foods
+Completed 302 Found in 22ms
+
+
+Started GET "/fridge_foods" for 127.0.0.1 at Fri Nov 11 14:42:22 -0800 2011
+  Processing by FridgeFoodsController#index as HTML
+  [1m[35mFridgeFood Load (0.5ms)[0m  SELECT "fridge_foods".* FROM "fridge_foods"
+
+Rendered fridge_foods/index.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 24ms (Views: 16.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Nov 11 14:42:41 -0800 2011
+  Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Rendered home/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 20ms (Views: 10.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/fridge_foods" for 127.0.0.1 at Fri Nov 11 15:07:10 -0800 2011
+  Processing by FridgeFoodsController#index as HTML
+  [1m[35mFridgeFood Load (0.5ms)[0m  SELECT "fridge_foods".* FROM "fridge_foods"
+
+Rendered fridge_foods/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 27ms (Views: 22.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Nov 11 15:11:41 -0800 2011
+  Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Rendered home/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 339ms (Views: 332.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/fridge_foods/kill" for 127.0.0.1 at Fri Nov 11 15:28:55 -0800 2011
+  Processing by FridgeFoodsController#show as HTML
+  Parameters: {"id"=>"kill"}
+  [1m[35mFridgeFood Load (0.1ms)[0m  SELECT "fridge_foods".* FROM "fridge_foods" WHERE "fridge_foods"."id" = 0 LIMIT 1
+Completed 404 Not Found in 5ms
+
+ActiveRecord::RecordNotFound (Couldn't find FridgeFood with ID=kill):
+  app/controllers/fridge_foods_controller.rb:42:in `show'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.5ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.9ms)
+
+
+Started GET "/admin/fridge_foods/kill" for 127.0.0.1 at Fri Nov 11 15:29:43 -0800 2011
+  Processing by FridgeFoodsController#kill as HTML
+Completed 500 Internal Server Error in 1ms
+
+NameError (uninitialized constant FridgeFoodsController::FridgeFoods):
+  app/controllers/fridge_foods_controller.rb:4:in `kill'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.3ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.1ms)
+
+
+Started GET "/admin/fridge_foods/kill" for 127.0.0.1 at Fri Nov 11 15:30:13 -0800 2011
+  Processing by FridgeFoodsController#kill as HTML
+  [1m[36mAREL (2.4ms)[0m  [1mDELETE FROM "fridge_foods" WHERE 1=1[0m
+Redirected to http://0.0.0.0:3000/fridge_foods
+Completed 302 Found in 7ms
+
+
+Started GET "/fridge_foods" for 127.0.0.1 at Fri Nov 11 15:30:13 -0800 2011
+  Processing by FridgeFoodsController#index as HTML
+  [1m[35mFridgeFood Load (0.3ms)[0m  SELECT "fridge_foods".* FROM "fridge_foods"
+
+Rendered fridge_foods/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 12ms (Views: 6.8ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/fridge_foods/kill" for 127.0.0.1 at Fri Nov 11 15:30:27 -0800 2011
+  Processing by FridgeFoodsController#show as HTML
+  Parameters: {"id"=>"kill"}
+  [1m[36mFridgeFood Load (0.1ms)[0m  [1mSELECT "fridge_foods".* FROM "fridge_foods" WHERE "fridge_foods"."id" = 0 LIMIT 1[0m
+Completed 404 Not Found in 5ms
+
+ActiveRecord::RecordNotFound (Couldn't find FridgeFood with ID=kill):
+  app/controllers/fridge_foods_controller.rb:42:in `show'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.3ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.9ms)

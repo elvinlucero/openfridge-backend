@@ -22,6 +22,7 @@ resources :logs
   match "fridge_foods/:id/:uid/eat" => "fridge_foods#eat"
   match "fridge_foods/:id/:uid/throw" => "fridge_foods#throw"
   match "users/:uid/fridge_foods" => "fridge_foods#getfoods"
+  match "admin/fridge_foods/kill" => "fridge_foods#kill"
   
   # Saved food routes
   match "saved_foods/push?" => "saved_foods#push"

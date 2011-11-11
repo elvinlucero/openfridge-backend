@@ -1,5 +1,10 @@
 class FridgeFoodsController < ApplicationController
   require 'time' 
+  def kill
+   @fridge_foods = FridgeFood.delete_all()
+   redirect_to :controller => "fridge_foods"  
+  end
+  
   def push
     exp = Time.parse("#{params[:day]}/#{params[:month]}/#{params[:year]}")
     puts exp
