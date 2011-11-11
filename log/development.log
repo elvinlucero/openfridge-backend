@@ -9630,3 +9630,144 @@ Started GET "/fridge_foods/18" for 127.0.0.1 at Fri Nov 11 13:01:56 -0800 2011
   [1m[36mFridgeFood Load (0.1ms)[0m  [1mSELECT "fridge_foods".* FROM "fridge_foods" WHERE "fridge_foods"."id" = 18 LIMIT 1[0m
 Rendered inline template (0.2ms)
 Completed 200 OK in 9ms (Views: 0.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Nov 11 13:15:21 -0800 2011
+  Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+Rendered home/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 29ms (Views: 22.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/fridge_foods/up" for 127.0.0.1 at Fri Nov 11 13:15:41 -0800 2011
+
+SyntaxError (/Users/elvinlucero/Projects/openfridge/app/controllers/fridge_foods_controller.rb:39: syntax error, unexpected tIDENTIFIER, expecting kTHEN or ':' or '\n' or ';'
+...te.current()).floor > 3) state = "good"
+                              ^
+/Users/elvinlucero/Projects/openfridge/app/controllers/fridge_foods_controller.rb:40: syntax error, unexpected tIDENTIFIER, expecting kTHEN or ':' or '\n' or ';'
+...te.curernt()).floor < 0) state = "expired"
+                              ^
+/Users/elvinlucero/Projects/openfridge/app/controllers/fridge_foods_controller.rb:41: syntax error, unexpected kELSE, expecting kEND
+    else sate = "near"
+        ^
+/Users/elvinlucero/Projects/openfridge/app/controllers/fridge_foods_controller.rb:117: syntax error, unexpected kEND, expecting $end):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (44.2ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (50.3ms)
+
+
+Started GET "/fridge_foods/push/1/asdasd/2011/1/1" for 127.0.0.1 at Fri Nov 11 13:15:44 -0800 2011
+
+SyntaxError (/Users/elvinlucero/Projects/openfridge/app/controllers/fridge_foods_controller.rb:39: syntax error, unexpected tIDENTIFIER, expecting kTHEN or ':' or '\n' or ';'
+...te.current()).floor > 3) state = "good"
+                              ^
+/Users/elvinlucero/Projects/openfridge/app/controllers/fridge_foods_controller.rb:40: syntax error, unexpected tIDENTIFIER, expecting kTHEN or ':' or '\n' or ';'
+...te.curernt()).floor < 0) state = "expired"
+                              ^
+/Users/elvinlucero/Projects/openfridge/app/controllers/fridge_foods_controller.rb:41: syntax error, unexpected kELSE, expecting kEND
+    else sate = "near"
+        ^
+/Users/elvinlucero/Projects/openfridge/app/controllers/fridge_foods_controller.rb:117: syntax error, unexpected kEND, expecting $end):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.5ms)
+
+
+Started GET "/fridge_foods/push/1/asdasd/2011/1/1" for 127.0.0.1 at Fri Nov 11 13:16:02 -0800 2011
+
+SyntaxError (/Users/elvinlucero/Projects/openfridge/app/controllers/fridge_foods_controller.rb:41: syntax error, unexpected ':'
+    else: sate = "near"
+         ^
+/Users/elvinlucero/Projects/openfridge/app/controllers/fridge_foods_controller.rb:117: syntax error, unexpected $end, expecting kEND):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.7ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.9ms)
+
+
+Started GET "/fridge_foods/push/1/asdasd/2011/1/1" for 127.0.0.1 at Fri Nov 11 13:16:14 -0800 2011
+
+SyntaxError (/Users/elvinlucero/Projects/openfridge/app/controllers/fridge_foods_controller.rb:117: syntax error, unexpected $end, expecting kEND):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.3ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.8ms)
+
+
+Started GET "/fridge_foods/push/1/asdasd/2011/1/1" for 127.0.0.1 at Fri Nov 11 13:16:44 -0800 2011
+
+SyntaxError (/Users/elvinlucero/Projects/openfridge/app/controllers/fridge_foods_controller.rb:120: syntax error, unexpected $end, expecting kEND):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.4ms)
+
+
+Started GET "/fridge_foods/push/1/asdasd/2011/1/1" for 127.0.0.1 at Fri Nov 11 13:16:46 -0800 2011
+
+SyntaxError (/Users/elvinlucero/Projects/openfridge/app/controllers/fridge_foods_controller.rb:120: syntax error, unexpected $end, expecting kEND):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.7ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.7ms)
+
+
+Started GET "/fridge_foods/push/1/asdasd/2011/1/1" for 127.0.0.1 at Fri Nov 11 13:16:59 -0800 2011
+
+SyntaxError (/Users/elvinlucero/Projects/openfridge/app/controllers/fridge_foods_controller.rb:120: syntax error, unexpected $end, expecting kEND):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.9ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.3ms)
+
+
+Started GET "/fridge_foods/push/1/asdasd/2011/1/1" for 127.0.0.1 at Fri Nov 11 13:17:31 -0800 2011
+
+SyntaxError (/Users/elvinlucero/Projects/openfridge/app/controllers/fridge_foods_controller.rb:120: syntax error, unexpected $end, expecting kEND):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (45.7ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (52.3ms)
+
+
+Started GET "/fridge_foods/update/1/1/eggs/2011/5/1" for 127.0.0.1 at Fri Nov 11 13:18:40 -0800 2011
+
+ActionController::RoutingError (No route matches "/fridge_foods/update/1/1/eggs/2011/5/1"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/fridge_foods/push/1/asdasd/2011/1/1" for 127.0.0.1 at Fri Nov 11 13:18:55 -0800 2011
+  Processing by FridgeFoodsController#push as HTML
+  Parameters: {"month"=>"1", "uid"=>"1", "day"=>"1", "year"=>"2011", "desc"=>"asdasd"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "fridge_foods" ("user_id", "updated_at", "created_at", "desc", "expiration") VALUES (1, '2011-11-11 21:18:55.905629', '2011-11-11 21:18:55.905629', 'asdasd', '2011-01-01 08:00:00.000000')
+Redirected to http://0.0.0.0:3000/fridge_foods/19
+Completed 302 Found in 29ms
+
+
+Started GET "/fridge_foods/19" for 127.0.0.1 at Fri Nov 11 13:18:55 -0800 2011
+  Processing by FridgeFoodsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mFridgeFood Load (0.1ms)[0m  [1mSELECT "fridge_foods".* FROM "fridge_foods" WHERE "fridge_foods"."id" = 19 LIMIT 1[0m
+Rendered inline template (0.2ms)
+Completed 200 OK in 9ms (Views: 0.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/fridge_foods/" for 127.0.0.1 at Fri Nov 11 13:19:05 -0800 2011
+  Processing by FridgeFoodsController#index as HTML
+  [1m[35mFridgeFood Load (0.6ms)[0m  SELECT "fridge_foods".* FROM "fridge_foods"
+
+Rendered fridge_foods/index.html.erb within layouts/application (58.2ms)
+Completed 200 OK in 70ms (Views: 64.3ms | ActiveRecord: 0.6ms)

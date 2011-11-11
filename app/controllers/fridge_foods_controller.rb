@@ -35,9 +35,17 @@ class FridgeFoodsController < ApplicationController
   # GET /fridge_foods/1.xml
   def show
     @fridge_food = FridgeFood.find(params[:id])
+    state = ""
+    if ((@fridge_food.expiration - Date.current()).floor > 3)
+      state = "good"
+    elsif ((@fridge_food.expiration - Date.current()).floor < 0)
+      state = "expired"
+    else 
+      state = "near"
+    end
 
     respond_to do |format|
-      format.html { render :inline => @fridge_food.id.to_s }
+      format.html { render :inline => @fridge_food.id.to_s + " " + state }
       format.xml  { render :xml => @fridge_food }
     end
   end
