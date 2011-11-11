@@ -23,7 +23,7 @@ class ShoppingListsController < ApplicationController
     @shopping_lists = ShoppingList.all
 
     respond_to do |format|
-      format.html { render :inline => @shopping_lists.id.to_s }
+      format.html 
       format.xml  { render :xml => @shopping_lists }
     end
   end
@@ -34,7 +34,7 @@ class ShoppingListsController < ApplicationController
     @shopping_list = ShoppingList.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.html { render :inline => @shopping_lists.id.to_s }
       format.xml  { render :xml => @shopping_list }
     end
   end
