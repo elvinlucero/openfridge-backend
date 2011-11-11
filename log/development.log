@@ -9771,3 +9771,159 @@ Started GET "/fridge_foods/" for 127.0.0.1 at Fri Nov 11 13:19:05 -0800 2011
 
 Rendered fridge_foods/index.html.erb within layouts/application (58.2ms)
 Completed 200 OK in 70ms (Views: 64.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/fridge_foods/10/1/eat" for 127.0.0.1 at Fri Nov 11 14:36:54 -0800 2011
+  Processing by FridgeFoodsController#eat as HTML
+  Parameters: {"uid"=>"1", "id"=>"10"}
+  [1m[36mFridgeFood Load (0.1ms)[0m  [1mSELECT "fridge_foods".* FROM "fridge_foods" WHERE "fridge_foods"."id" = 10 LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  DELETE FROM "fridge_foods" WHERE "fridge_foods"."id" = 10
+Redirected to http://0.0.0.0:3000/fridge_foods
+Completed 302 Found in 33ms
+
+
+Started GET "/fridge_foods" for 127.0.0.1 at Fri Nov 11 14:36:54 -0800 2011
+  Processing by FridgeFoodsController#index as HTML
+  [1m[36mFridgeFood Load (0.6ms)[0m  [1mSELECT "fridge_foods".* FROM "fridge_foods"[0m
+
+Rendered fridge_foods/index.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 87ms (Views: 35.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/logs" for 127.0.0.1 at Fri Nov 11 14:36:59 -0800 2011
+  Processing by LogsController#index as HTML
+  [1m[35mLog Load (0.3ms)[0m  SELECT "logs".* FROM "logs"
+Rendered logs/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 13ms (Views: 7.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/logs" for 127.0.0.1 at Fri Nov 11 14:37:22 -0800 2011
+  Processing by LogsController#index as HTML
+  [1m[36mLog Load (0.3ms)[0m  [1mSELECT "logs".* FROM "logs"[0m
+Rendered logs/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 12ms (Views: 7.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/fridge_foods/10/1/eat" for 127.0.0.1 at Fri Nov 11 14:37:25 -0800 2011
+  Processing by FridgeFoodsController#eat as HTML
+  Parameters: {"uid"=>"1", "id"=>"10"}
+  [1m[35mFridgeFood Load (0.1ms)[0m  SELECT "fridge_foods".* FROM "fridge_foods" WHERE "fridge_foods"."id" = 10 LIMIT 1
+Completed 404 Not Found in 6ms
+
+ActiveRecord::RecordNotFound (Couldn't find FridgeFood with ID=10):
+  app/controllers/fridge_foods_controller.rb:98:in `eat'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (34.2ms)
+
+
+Started GET "/fridge_foods/11/1/eat" for 127.0.0.1 at Fri Nov 11 14:37:30 -0800 2011
+  Processing by FridgeFoodsController#eat as HTML
+  Parameters: {"uid"=>"1", "id"=>"11"}
+  [1m[36mFridgeFood Load (0.1ms)[0m  [1mSELECT "fridge_foods".* FROM "fridge_foods" WHERE "fridge_foods"."id" = 11 LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "logs" ("created_at", "user_id", "action", "updated_at") VALUES ('2011-11-11 22:37:30.695988', 1, 'eat', '2011-11-11 22:37:30.695988')
+  [1m[36mAREL (0.3ms)[0m  [1mDELETE FROM "fridge_foods" WHERE "fridge_foods"."id" = 11[0m
+Redirected to http://0.0.0.0:3000/fridge_foods
+Completed 302 Found in 22ms
+
+
+Started GET "/fridge_foods" for 127.0.0.1 at Fri Nov 11 14:37:30 -0800 2011
+  Processing by FridgeFoodsController#index as HTML
+  [1m[35mFridgeFood Load (0.5ms)[0m  SELECT "fridge_foods".* FROM "fridge_foods"
+
+Rendered fridge_foods/index.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 25ms (Views: 20.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/logs" for 127.0.0.1 at Fri Nov 11 14:37:34 -0800 2011
+  Processing by LogsController#index as HTML
+  [1m[36mLog Load (0.3ms)[0m  [1mSELECT "logs".* FROM "logs"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered logs/index.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 24ms (Views: 19.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/logs" for 127.0.0.1 at Fri Nov 11 14:37:51 -0800 2011
+  Processing by LogsController#index as HTML
+  [1m[36mLog Load (0.5ms)[0m  [1mSELECT "logs".* FROM "logs"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered logs/index.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 33ms (Views: 25.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/fridge_foods/12/1/eat" for 127.0.0.1 at Fri Nov 11 14:37:56 -0800 2011
+  Processing by FridgeFoodsController#eat as HTML
+  Parameters: {"uid"=>"1", "id"=>"12"}
+  [1m[36mFridgeFood Load (0.2ms)[0m  [1mSELECT "fridge_foods".* FROM "fridge_foods" WHERE "fridge_foods"."id" = 12 LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "logs" ("updated_at", "action", "created_at", "user_id") VALUES ('2011-11-11 22:37:56.740271', 'eat', '2011-11-11 22:37:56.740271', 1)
+  [1m[36mAREL (0.2ms)[0m  [1mDELETE FROM "fridge_foods" WHERE "fridge_foods"."id" = 12[0m
+Redirected to http://0.0.0.0:3000/fridge_foods
+Completed 302 Found in 66ms
+
+
+Started GET "/fridge_foods" for 127.0.0.1 at Fri Nov 11 14:37:56 -0800 2011
+  Processing by FridgeFoodsController#index as HTML
+  [1m[35mFridgeFood Load (0.5ms)[0m  SELECT "fridge_foods".* FROM "fridge_foods"
+
+Rendered fridge_foods/index.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 24ms (Views: 18.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/logs" for 127.0.0.1 at Fri Nov 11 14:38:01 -0800 2011
+  Processing by LogsController#index as HTML
+  [1m[36mLog Load (0.4ms)[0m  [1mSELECT "logs".* FROM "logs"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered logs/index.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 28ms (Views: 21.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/fridge_foods/10/1/eat" for 127.0.0.1 at Fri Nov 11 14:38:26 -0800 2011
+  Processing by FridgeFoodsController#eat as HTML
+  Parameters: {"uid"=>"1", "id"=>"10"}
+  [1m[35mFridgeFood Load (0.1ms)[0m  SELECT "fridge_foods".* FROM "fridge_foods" WHERE "fridge_foods"."id" = 10 LIMIT 1
+Completed 404 Not Found in 5ms
+
+ActiveRecord::RecordNotFound (Couldn't find FridgeFood with ID=10):
+  app/controllers/fridge_foods_controller.rb:98:in `eat'
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.6ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.6ms)
+
+
+Started GET "/fridge_foods/14/1/eat" for 127.0.0.1 at Fri Nov 11 14:38:31 -0800 2011
+  Processing by FridgeFoodsController#eat as HTML
+  Parameters: {"uid"=>"1", "id"=>"14"}
+  [1m[36mFridgeFood Load (0.2ms)[0m  [1mSELECT "fridge_foods".* FROM "fridge_foods" WHERE "fridge_foods"."id" = 14 LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "logs" ("action", "updated_at", "created_at", "user_id") VALUES ('eat', '2011-11-11 22:38:31.378016', '2011-11-11 22:38:31.378016', 1)
+  [1m[36mAREL (0.4ms)[0m  [1mDELETE FROM "fridge_foods" WHERE "fridge_foods"."id" = 14[0m
+Redirected to http://0.0.0.0:3000/fridge_foods
+Completed 302 Found in 23ms
+
+
+Started GET "/fridge_foods" for 127.0.0.1 at Fri Nov 11 14:38:31 -0800 2011
+  Processing by FridgeFoodsController#index as HTML
+  [1m[35mFridgeFood Load (0.5ms)[0m  SELECT "fridge_foods".* FROM "fridge_foods"
+
+Rendered fridge_foods/index.html.erb within layouts/application (54.0ms)
+Completed 200 OK in 63ms (Views: 57.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/fridge_foods/15/1/eat" for 127.0.0.1 at Fri Nov 11 14:39:12 -0800 2011
+  Processing by FridgeFoodsController#eat as HTML
+  Parameters: {"uid"=>"1", "id"=>"15"}
+  [1m[36mFridgeFood Load (0.2ms)[0m  [1mSELECT "fridge_foods".* FROM "fridge_foods" WHERE "fridge_foods"."id" = 15 LIMIT 1[0m
+  [1m[35mAREL (0.8ms)[0m  INSERT INTO "logs" ("updated_at", "action", "user_id", "created_at") VALUES ('2011-11-11 22:39:12.701320', 'eat', 1, '2011-11-11 22:39:12.701320')
+  [1m[36mAREL (0.3ms)[0m  [1mDELETE FROM "fridge_foods" WHERE "fridge_foods"."id" = 15[0m
+Redirected to http://0.0.0.0:3000/fridge_foods
+Completed 302 Found in 24ms
+
+
+Started GET "/fridge_foods" for 127.0.0.1 at Fri Nov 11 14:39:12 -0800 2011
+  Processing by FridgeFoodsController#index as HTML
+  [1m[35mFridgeFood Load (0.5ms)[0m  SELECT "fridge_foods".* FROM "fridge_foods"
+
+Rendered fridge_foods/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 22ms (Views: 17.7ms | ActiveRecord: 1.7ms)

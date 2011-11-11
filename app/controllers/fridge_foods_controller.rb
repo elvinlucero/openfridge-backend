@@ -96,12 +96,14 @@ class FridgeFoodsController < ApplicationController
 
   def eat 
     @fridge_food = FridgeFood.find(params[:id])
+    @log = Log.create(:user_id => params[:uid], :action => 'eat') 
     @fridge_food.destroy
     redirect_to :controller => "fridge_foods"  
   end
 
   def throw
     @fridge_food = FridgeFood.find(params[:id])
+    @log = Log.create(:user_id => params[:uid], :action => 'throw') 
     @fridge_food.destroy
     redirect_to :controller => "fridge_foods"  
   end

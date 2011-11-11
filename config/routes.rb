@@ -19,8 +19,8 @@ resources :logs
   match "fridge_foods/push?" => "fridge_foods#push"
   match "fridge_foods/push/:uid/:desc/:year/:month/:day" => "fridge_foods#push"
   match "fridge_foods/update/:id/:desc/:year/:month/:day" => "fridge_foods#update"
-  match "fridge_foods/:id/eat" => "fridge_foods#eat"
-  match "fridge_foods/:id/throw" => "fridge_foods#throw"
+  match "fridge_foods/:id/:uid/eat" => "fridge_foods#eat"
+  match "fridge_foods/:id/:uid/throw" => "fridge_foods#throw"
   match "users/:uid/fridge_foods" => "fridge_foods#getfoods"
   
   # Saved food routes
