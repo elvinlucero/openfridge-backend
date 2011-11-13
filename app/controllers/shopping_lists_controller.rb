@@ -13,7 +13,7 @@ class ShoppingListsController < ApplicationController
     @shopping_lists = ShoppingList.find_all_by_user_id(params[:uid])
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  # { render :xml => @fridge_foods }
+      format.xml  { render :xml => @shopping_lists }
     end
   end
   
