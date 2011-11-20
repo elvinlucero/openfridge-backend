@@ -96,7 +96,12 @@ class FridgeFoodsController < ApplicationController
     
     @fridge_food.update_attributes(:desc => params[:desc], :expiration => exp)
     @fridge_food.save! 
-    redirect_to :controller => "fridge_foods"  
+    
+    redirect_to @fridge_food  
+    #respond_to do |format|
+    #  format.html { render :inline => "" + state }
+    #  format.xml  { render :xml => @fridge_food }
+    #end
   end
 
   def eat 
