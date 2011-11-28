@@ -5,6 +5,7 @@ class ShoppingListsController < ApplicationController
   end
 
   def push
+   @log = Log.create(:user_id => params[:uid], :action => 'add to shopping list') 
    @shopping_list = ShoppingList.create([:desc => params[:desc], :user => User.find(params[:uid])])
    redirect_to @shopping_list 
   end
@@ -20,7 +21,7 @@ class ShoppingListsController < ApplicationController
   # GET /shopping_lists
   # GET /shopping_lists.xml
   def index
-    @shopping_lists = ShoppingList.all
+    @shopping_lists = ShoppingList.find_all_by_user_id(session[:user_id])
 
     respond_to do |format|
       format.html 
@@ -74,6 +75,7 @@ class ShoppingListsController < ApplicationController
   # PUT /shopping_lists/1
   # PUT /shopping_lists/1.xml
   def update
+    @log = Log.create(:user_id => params[:uid], :action => 'update shopping list') 
     @shopping_list = ShoppingList.find(params[:id])
 
     respond_to do |format|

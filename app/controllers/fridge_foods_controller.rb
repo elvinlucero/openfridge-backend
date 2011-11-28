@@ -6,6 +6,7 @@ class FridgeFoodsController < ApplicationController
   end
   
   def push
+    @log = Log.create(:user_id => params[:uid], :action => 'push') 
     exp = Time.parse("#{params[:day]}/#{params[:month]}/#{params[:year]}")
     puts exp
     @fridge_food = FridgeFood.create([:desc => params[:desc], :expiration => exp, :user => User.find(params[:uid])])
@@ -26,7 +27,7 @@ class FridgeFoodsController < ApplicationController
   # GET /fridge_foods
   # GET /fridge_foods.xml
   def index
-    @fridge_foods = FridgeFood.all
+    @fridge_foods = FridgeFood.find_all_by_user_id(session[:user_id])
 
     logger.debug @fridge_food
     
@@ -90,6 +91,7 @@ class FridgeFoodsController < ApplicationController
   # PUT /fridge_foods/1
   # PUT /fridge_foods/1.xml
   def update
+    @log = Log.create(:user_id => params[:uid], :action => 'update') 
     @fridge_food = FridgeFood.find(params[:id])
 
     exp = Time.parse("#{params[:day]}/#{params[:month]}/#{params[:year]}")
