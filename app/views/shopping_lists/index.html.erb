@@ -1,12 +1,12 @@
 
-<h1>Expiry List</h1>
+<h1>Shopping List</h1>
 
 <table class="fridge_foods">
   <tr class="expired">
     <th>Item</th>
     <th></th>
   </tr>
-<% @shopping_lists.find_all{|f| f.user_id == session[:user_id]  }.each do |f| %>
+<% @shopping_lists.find_all.each do |f| %>
   <tr>
     <td><%= f.desc %></td>
     <td><%= link_to 'Delete', f, :confirm => 'Are you sure?', :method => :delete %></td>
